@@ -523,4 +523,23 @@ export default function App() {
       )}
     </>
   );
+  export default function App() {
+  const [data, setData] = useState(SAMPLE);
+
+  return (
+    <div className="app">
+      <style>{STYLE}</style>
+
+      <div className="page">
+        <div className="page-title">Certificates Tracker</div>
+
+        {data.map(item => (
+          <div key={item.id}>
+            {item.name} — {item.cert}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+  }
 }
